@@ -40,57 +40,22 @@ export class UsersComponent implements OnInit {
       }
     );
 
-    this.deleteModal = new window.bootstrap.Modal(
-      document.getElementById('deleteModal'),
-      {
-        keyboard: false
-      }
-    );
-
 
   }
 
   openModal(idUser: number): void {
-    if (idUser == 0) {
-      this.modalTitle = "Add User";
-      this.userForm = {
-        fname: '',
-        id: 0
-      };
-    } else {
-      this.modalTitle = "Update User";
-      this.userService.entities$.subscribe(data => {
-        let filteredUser = data.filter((item) => item.id == idUser)[0];
-        this.userForm = { ...filteredUser };
-      })
-    }
-    this.myModal.show();
-  }
 
+  }
   openDeleteModal(idUser: number): void {
-    this.userIdToDelete = idUser;
-    this.deleteModal.show();
+
   }
 
   onDelete(): void {
-    this.userService.delete(this.userIdToDelete)
-      .subscribe(res => {
-        this.deleteModal.hide();
-      })
+
   }
 
   saveOrUpdate(): void {
-    if (this.userForm.id == 0) {
-      this.userService.add(this.userForm)
-        .subscribe(res => {
-          this.myModal.hide();
-        })
-    } else {
-      this.userService.update(this.userForm)
-        .subscribe(res => {
-          this.myModal.hide();
-        })
-    }
+
   }
 
 }

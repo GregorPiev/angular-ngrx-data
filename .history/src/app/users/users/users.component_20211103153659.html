@@ -1,0 +1,30 @@
+<div class="user card">
+  <div class="card-header custom-header">
+    <h1>Users list</h1>
+    <button type="button" class="btn btn-primary" (click)="openModal()">Add User</button>
+  </div>
+
+  <div class="card-body">
+    <table class="table table-striped table-hover table-lg table-responsive">
+
+      <thead class="table-light">
+        <th class="col-1">Id</th>
+        <th class="col-9">Full Name</th>
+        <th class="col-2">Action</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usr of (allUsers$ | async)">
+          <td class="card-title">{{usr?.id}}</td>
+          <td class="card-text">{{usr?.fname}}</td>
+          <td></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th class="col-12">&nbspEEEEEEEEEEE</th>
+        </tr>
+      </tfoot>
+
+    </table>
+  </div>
+</div>

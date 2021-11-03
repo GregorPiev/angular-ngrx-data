@@ -13,6 +13,9 @@ export class UserUrlHttpGeneralGeneratorService extends DefaultHttpUrlGenerator 
   protected getResourceUrls(
     entityName: string,
     root: string): HttpResourceUrls {
+
+    console.info("%cUser => Entity Name" + entityName, "color: fiolet; font-size: 18px;");
+
     let resourceUrls = this.knownHttpResourceUrls[entityName];
     if (entityName == 'User') {
       const url = 'http://localhost:3000/Users/';

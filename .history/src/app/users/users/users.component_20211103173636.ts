@@ -69,7 +69,6 @@ export class UsersComponent implements OnInit {
 
   openDeleteModal(idUser: number): void {
     this.userIdToDelete = idUser;
-    this.deleteModal.show();
   }
 
   onDelete(): void {

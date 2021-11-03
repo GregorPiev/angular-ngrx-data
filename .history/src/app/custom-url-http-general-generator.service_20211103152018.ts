@@ -25,20 +25,6 @@ export class CustomUrlHttpGeneralGeneratorService extends DefaultHttpUrlGenerato
         collectionResourceUrl: url
       };
       this.registerHttpResourceUrls({ [entityName]: resourceUrls });
-    } else if (entityName == 'User') {
-      const url = 'http://localhost:3000/Users/';
-      resourceUrls = {
-        entityResourceUrl: url,
-        collectionResourceUrl: url
-      };
-      this.registerHttpResourceUrls({ [entityName]: resourceUrls });
-    } else if (entityName == 'Message') {
-      const url = 'http://localhost:3000/Messages/';
-      resourceUrls = {
-        entityResourceUrl: url,
-        collectionResourceUrl: url
-      };
-      this.registerHttpResourceUrls({ [entityName]: resourceUrls });
     }
     return resourceUrls;
   }

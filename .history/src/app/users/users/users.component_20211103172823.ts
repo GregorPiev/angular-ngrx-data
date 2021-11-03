@@ -68,15 +68,11 @@ export class UsersComponent implements OnInit {
   }
 
   openDeleteModal(idUser: number): void {
-    this.userIdToDelete = idUser;
-    this.deleteModal.show();
+
   }
 
   onDelete(): void {
-    this.userService.delete(this.userIdToDelete)
-      .subscribe(res => {
-        this.deleteModal.hide();
-      })
+
   }
 
   saveOrUpdate(): void {
@@ -86,10 +82,7 @@ export class UsersComponent implements OnInit {
           this.myModal.hide();
         })
     } else {
-      this.userService.update(this.userForm)
-        .subscribe(res => {
-          this.myModal.hide();
-        })
+
     }
   }
 

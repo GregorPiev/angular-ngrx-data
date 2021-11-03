@@ -15,25 +15,11 @@ export class CustomUrlHttpGeneralGeneratorService extends DefaultHttpUrlGenerato
     root: string
   ): HttpResourceUrls {
 
-    console.info('%cGenerator URL => Entity Name:' + entityName, 'color: green; font-size: 18px;');
+    console.info('%cAbout => Entity Name:' + entityName, 'color: green; font-size: 18px;');
 
     let resourceUrls = this.knownHttpResourceUrls[entityName];
     if (entityName == 'About') {
       const url = 'http://localhost:3000/Abouts/';
-      resourceUrls = {
-        entityResourceUrl: url,
-        collectionResourceUrl: url
-      };
-      this.registerHttpResourceUrls({ [entityName]: resourceUrls });
-    } else if (entityName == 'User') {
-      const url = 'http://localhost:3000/Users/';
-      resourceUrls = {
-        entityResourceUrl: url,
-        collectionResourceUrl: url
-      };
-      this.registerHttpResourceUrls({ [entityName]: resourceUrls });
-    } else if (entityName == 'Message') {
-      const url = 'http://localhost:3000/Messages/';
       resourceUrls = {
         entityResourceUrl: url,
         collectionResourceUrl: url

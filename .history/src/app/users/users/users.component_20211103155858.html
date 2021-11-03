@@ -17,8 +17,8 @@
           <td class="card-title col-1 text-center">{{usr?.id}}</td>
           <td class="card-text col-9">{{usr?.fname}}</td>
           <td class="col-2 text-center">
-            <button class="button btn-primary" (click)="openModal(usr.id)">Update</button>&nbsp;
-            <button class="button btn-primary" (click)="openDeleteModal(usr.id)">Delete</button>
+            <button class="button btn-primary" (click)="openModal(usr.id)">Update</button>
+            <button class="button btn-primary" (click)="onDelete(usr.id)">Delete</button>
           </td>
         </tr>
       </tbody>
@@ -42,11 +42,11 @@
       </div>
       <div class="modal-body">
         <div class="container">
-          <input type="hidden" id="userId" [(ngModel)]="userForm.id">
+          <input type="hidden" id="productId" [(ngModel)]="userForm.id">
           <div class="row">
             <div class="mb-3">
-              <label for="fname" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="fname" [(ngModel)]="userForm.fname" />
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" [(ngModel)]="userForm.fname" />
             </div>
           </div>
         </div>
