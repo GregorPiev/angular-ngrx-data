@@ -8,19 +8,14 @@ import { UsersModule } from './users/users.module';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
-import { EntityDataModule, EntityDefinitionService, HttpUrlGenerator } from '@ngrx/data';
+import { EntityDataModule } from '@ngrx/data';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
-import { aboutEntityMetaData } from './about/about-entity-metadata';
-import { CommonModule } from '@angular/common';
-import { AboutComponent } from './about/about.component';
-import { CustomUrlHttpGeneralGeneratorService } from './custom-url-http-general-generator.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    AboutComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -36,15 +31,7 @@ import { CustomUrlHttpGeneralGeneratorService } from './custom-url-http-general-
       autoPause: true
     })
   ],
-  providers: [
-    {
-      provide: HttpUrlGenerator, useClass: CustomUrlHttpGeneralGeneratorService
-    }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor(entityDefinitionService: EntityDefinitionService) {
-    entityDefinitionService.registerMetadataMap(aboutEntityMetaData);
-  }
-}
+export class AppModule { }

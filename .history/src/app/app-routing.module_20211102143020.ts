@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: '', component: AboutComponent },
+  { path: 'abouts', component: AboutComponent },
   { path: 'users', loadChildren: () => import('./users/users.module').then(m => m.UsersModule) },
   { path: 'messages', loadChildren: () => import('./messages/messages.module').then(m => m.MessagesModule) }
 ];

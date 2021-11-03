@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fname": "Grego Pievski"
+    },
+    {
+      "id": 2,
+      "fname": "Alona Pievski"
+    },
+    {
+      "id": 3,
+      "fname": "Gav Ionai"
+    },
+    {
+      "id": 4,
+      "fname": "Ilana Harmata"
+    },
+    {
+      "id": 5,
+      "fname": "Indi Harmata"
+    },
+    {
+      "id": 6,
+      "fname": "Milan Pievski"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "idUser": "1",
+      "message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "id": 2,
+      "idUser": "1",
+      "message": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+    },
+    {
+      "id": 3,
+      "idUser": "2",
+      "message": "It has survived not only five centuries."
+    },
+    {
+      "id": 4,
+      "idUser": "2",
+      "message": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages."
+    }
+  ]
+}
